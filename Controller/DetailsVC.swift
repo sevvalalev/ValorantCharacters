@@ -37,7 +37,6 @@ class DetailsVC: UIViewController {
         nameLabel.text = character.displayName
         displayNameLabel.text = character.role?.displayName
         descriptionLabel.text = character.description
-        // foreach in içinde custom view den nesne oluşturup stack e ekledin
         
         character.abilities?.forEach({ ability in
             let view = AbilitiesView()
