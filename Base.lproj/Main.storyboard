@@ -125,10 +125,6 @@
                                                     <constraint firstAttribute="height" constant="272" id="fgo-AF-Ly1"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8PA-hg-nfX">
-                                                <rect key="frame" x="0.0" y="542" width="414" height="416"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goA-zH-zbv">
                                                 <rect key="frame" x="30" y="308" width="354" height="27.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -146,15 +142,25 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="kHV-TJ-Bbw">
+                                                <rect key="frame" x="0.0" y="442" width="406" height="800"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="800" id="h4p-q2-wqY"/>
+                                                </constraints>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="goA-zH-zbv" firstAttribute="leading" secondItem="oCK-2R-tnq" secondAttribute="leading" constant="30" id="0YL-JL-01C"/>
                                             <constraint firstAttribute="trailing" secondItem="5a9-ce-pgr" secondAttribute="trailing" constant="30" id="8u1-EC-AVT"/>
+                                            <constraint firstItem="kHV-TJ-Bbw" firstAttribute="leading" secondItem="oCK-2R-tnq" secondAttribute="leading" id="93v-jN-hVr"/>
                                             <constraint firstItem="5a9-ce-pgr" firstAttribute="top" secondItem="goA-zH-zbv" secondAttribute="bottom" constant="12" id="ENB-Ze-Dqr"/>
                                             <constraint firstAttribute="trailing" secondItem="goA-zH-zbv" secondAttribute="trailing" constant="30" id="Imt-pK-shr"/>
+                                            <constraint firstAttribute="trailing" secondItem="kHV-TJ-Bbw" secondAttribute="trailing" constant="8" id="K1X-Yb-lsB"/>
                                             <constraint firstAttribute="trailing" secondItem="3Nm-6E-yLo" secondAttribute="trailing" id="MDE-sN-mt9"/>
                                             <constraint firstItem="3Nm-6E-yLo" firstAttribute="leading" secondItem="oCK-2R-tnq" secondAttribute="leading" id="Op3-Wq-Ja8"/>
+                                            <constraint firstItem="kHV-TJ-Bbw" firstAttribute="top" secondItem="Bo0-jC-Ied" secondAttribute="bottom" constant="25.5" id="U6w-U5-2KX"/>
                                             <constraint firstItem="Bo0-jC-Ied" firstAttribute="leading" secondItem="oCK-2R-tnq" secondAttribute="leading" constant="30" id="g4b-gh-e09"/>
                                             <constraint firstAttribute="trailing" secondItem="Bo0-jC-Ied" secondAttribute="trailing" constant="30" id="kCg-jK-drr"/>
                                             <constraint firstItem="5a9-ce-pgr" firstAttribute="leading" secondItem="oCK-2R-tnq" secondAttribute="leading" constant="30" id="kCk-bu-wFe"/>
@@ -185,12 +191,12 @@
                     </view>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
-                        <outlet property="abilitiesStackView" destination="8PA-hg-nfX" id="ndf-mr-TUT"/>
                         <outlet property="backgroundImageView" destination="qex-j5-8S1" id="H7u-Qx-4YA"/>
                         <outlet property="descriptionLabel" destination="Bo0-jC-Ied" id="m06-zc-dET"/>
                         <outlet property="displayNameLabel" destination="5a9-ce-pgr" id="DZk-zp-uE2"/>
                         <outlet property="fullPortraitImageView" destination="jsP-Lf-fxq" id="YZv-Vi-W06"/>
                         <outlet property="nameLabel" destination="goA-zH-zbv" id="u0q-nA-8Gg"/>
+                        <outlet property="tableView" destination="kHV-TJ-Bbw" id="zgw-vA-64Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="53n-XE-Dj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -202,8 +208,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tla-IJ-8EZ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wGS-4S-PTJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="wGS-4S-PTJ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

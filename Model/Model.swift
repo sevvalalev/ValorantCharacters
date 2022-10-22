@@ -19,7 +19,7 @@ struct Data: Decodable {
     let fullPortrait: String?
     let role: Role?
     let abilities: [Abilities]?
-    let backgroundGradientColors: [GradientColors]?
+    let backgroundGradientColors: [String]?
 }
 
 struct Role: Decodable {
@@ -35,6 +35,3 @@ struct Abilities: Decodable{
     var displayIcon: String?
 }
 
-struct GradientColors: Decodable {
-    
-}

@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         fetchData()
         prepareTableView()
+        
     }
     
     private func prepareTableView(){
@@ -50,6 +51,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath) as?
             CharacterCell {
             cell.configure(with: characters?.data?[indexPath.row])
+            cell.selectionStyle = .none
             return cell
         }
         return UITableViewCell()// ?
@@ -68,6 +70,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
             let selectedCharacter = characters?.data?[indexPath.row]
             vc.character = selectedCharacter
             self.navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
     
